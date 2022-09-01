@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/sup-porto.jpg";
+import Carrito from "./Carrito";
 
 const Header = () => {
     return (
@@ -15,6 +16,7 @@ const Header = () => {
                             <a className="nav-link active" aria-current="page" href="#">Inicio</a>
                             <a className="nav-link" href="#">Paquetes</a>
                             <a className="nav-link" href="#">Contacto</a>
+                            <a className="nav-link" href="#"><Carrito /></a>
                         </div>
                     </div>
                 </div>
