@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/sup-porto.jpg";
+import logo from "../../assets/sup-porto.jpg";
 import Carrito from "./Carrito";
 
 const NavBar = () => {
