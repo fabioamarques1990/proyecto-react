@@ -1,19 +1,18 @@
 import './App.css';
 import 'core-js/actual';
-import NavBar from './components/header/NavBar';
-import ItemListContainer from './components/container/ItemListContainer';
-import ItemDetailContainer from './components/container/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './components/Home';
+
 
 function App() {
 
   return (
     <div>
-      <NavBar />
-
-      <ItemListContainer />
-
-      <ItemDetailContainer />
-
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

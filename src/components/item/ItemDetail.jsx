@@ -9,7 +9,7 @@ const ItemDetail = ({ item }) => {
             <div className="col-md-12 py-3">
                 <h2> {item.title} </h2>
                 <p> {item.description} </p>
-                <p> <b>{item.price}</b> </p>
+                <p> <b>${item.price}</b> </p>
             </div>
 
             <ItemCount stock={8} initial={1} onAdd={0} />

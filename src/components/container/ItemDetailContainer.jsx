@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
     <div style={{ minHeight: '70vh'}}>
         <ItemDetail item={item} />
     </div>
-  )
+  );
 }
 
 export default ItemDetailContainer;

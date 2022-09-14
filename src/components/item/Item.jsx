@@ -8,7 +8,7 @@ const Item = ({title, price}) => {
                 <p className="card-text text-center">${price}</p>
             </div>
         </div>
-    )
+    );
 }
 
 export default Item;
