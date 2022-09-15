@@ -1,8 +1,9 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import logo from "../../assets/sup-porto.jpg";
 import Carrito from "./Carrito";
 
-const NavBar = () => {
+const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -11,10 +12,11 @@ const NavBar = () => {
                     
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link active" aria-current="page" href="/">Inicio</a>
-                            <a className="nav-link" href="/">Paquetes</a>
-                            <a className="nav-link" href="/">Contacto</a>
-                            <a className="nav-link" href="/"><Carrito /></a>
+                            <Link className="nav-link active" aria-current="page" to={"/"}>Inicio</Link>
+                            <Link className="nav-link" to={"/category/sup"}>SUP</Link>
+                            <Link className="nav-link" to={"/category/surf"}>Surf</Link>
+                            <Link className="nav-link" to="/">Contacto</Link>
+                            <Link className="nav-link" to="/"><Carrito /></Link>
                         </div>
                     </div>
                 </div>
@@ -23,4 +25,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar;
+export default Navbar;
