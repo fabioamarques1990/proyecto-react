@@ -5,7 +5,7 @@ export const products = [
         title: 'SUP Pack 1',
         price: 500,
         description: 'Tabla - Remo',
-        stock: 1,
+        stock: 3,
     },
 
     {
@@ -14,7 +14,7 @@ export const products = [
         title: 'SUP Pack 2',
         price: 750,
         description: 'Tabla - Remo - Chaleco',
-        stock: 1,
+        stock: 3,
     },
 
     {
@@ -23,7 +23,7 @@ export const products = [
         title: 'SUP Pack 3',
         price: 1500,
         description: 'Tabla - Remo - Chaleco - Camara',
-        stock: 1,
+        stock: 3,
     },
 
     {
@@ -32,7 +32,7 @@ export const products = [
         title: 'SUP Pack 4',
         price: 3000,
         description: 'Tabla - Remo - Chaleco - Camara - Drone',
-        stock: 1,
+        stock: 3,
     },
 
     {
@@ -41,7 +41,7 @@ export const products = [
         title: 'Surf Pack 1',
         price: 500,
         description: 'Tabla',
-        stock: 1,
+        stock: 3,
     },
 
     {
@@ -50,7 +50,7 @@ export const products = [
         title: 'Surf Pack 2',
         price: 750,
         description: 'Tabla - Clase',
-        stock: 1,
+        stock: 3,
     },
 
     {
@@ -59,7 +59,7 @@ export const products = [
         title: 'Surf Pack 3',
         price: 1500,
         description: 'Tabla - Clase - Camara',
-        stock: 1,
+        stock: 3,
     },
 
     {
@@ -68,6 +68,6 @@ export const products = [
         title: 'Surf Pack 4',
         price: 3000,
         description: 'Tabla - Clase - Camara - Drone',
-        stock: 1,
+        stock: 3,
     },
 ]

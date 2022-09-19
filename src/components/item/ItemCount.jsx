@@ -1,10 +1,8 @@
-import React from 'react';
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [cantidad, setCantidad] = useState(initial);
     const [itemStock, setItemStock] = useState(stock);
-    const [itemAdd, setItemAdd] = useState(onAdd);
 
     const restar = (valor) => {
         if (valor > 0) {
@@ -20,29 +18,29 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     const agregarPaquetes = () => {
         if (cantidad <= itemStock) {
+            onAdd(cantidad);
             setItemStock(itemStock - cantidad);
-            setItemAdd(itemAdd + cantidad);
+            setCantidad(itemStock - cantidad);
         }
     }
 
+    useEffect(() => {
+        setItemStock(stock);
+        }, [stock]);
+
     return (
-        <div className="container py-5">
-            <div className="row">
-                <div className="col-md-2">
-                    <h3 className="text-center">Paquete</h3>
-                    <div className="input-group">
+            <div className="row text-center">
+                <div className="col-md-2 text-center">
+                    <div className="input-group text-center">
                         <input type="button" className="btn btn-secondary" value="-" onClick={() => { restar(cantidad - 1) }} />
                         <input type="text" className="form-control" value={cantidad} onChange={() => { }} />
                         <input type="button" className="btn btn-secondary" value="+" onClick={() => { sumar(cantidad + 1) }} />
                     </div>
-                    <div className="d-grid gap-2 pt-3">
+                    <div className="d-grid gap-2 pt-3 text-center">
                         <input type="button" className="btn btn-secondary" value="Agregar" onClick={() => {agregarPaquetes()}} />
                     </div>
-                    <br />
-                    <h5>Paquetes seleccionados: {itemAdd}</h5>
                 </div>
             </div>
-        </div>
     );
 }
 
