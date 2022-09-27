@@ -15,6 +15,11 @@ const Provider = ({children}) => {
         }
     }
 
+    const deleteOne = (id) => {
+        const productosFiltrados = cart.filter((prod) => prod.id !== id)
+        setCart(productosFiltrados);
+    };
+
     const clear = () => {
         setCart([]);
     }
@@ -28,7 +33,7 @@ const Provider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{cart, addItem, clear, cartTotal}}>
+        <CartContext.Provider value={{cart, addItem, clear, deleteOne, cartTotal}}>
             {children}
         </CartContext.Provider>
     )

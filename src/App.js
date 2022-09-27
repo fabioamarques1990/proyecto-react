@@ -5,7 +5,7 @@ import Navbar from './components/header/Navbar';
 import ItemListContainer from './components/container/ItemListContainer';
 import ItemDetailContainer from './components/container/ItemDetailContainer';
 import Provider from './components/context/Context';
-import Carrito from './components/header/Carrito';
+import CartList from './components/header/CartList';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Route exact path="/" element={<ItemListContainer />} />
             <Route exact path="/category/:activity" element={<ItemListContainer />} />
             <Route exact path="/category/activity/:id" element={<ItemDetailContainer />} />
-            <Route path={"/carrito"} element={<Carrito />} />
+            <Route path={"/carrito"} element={<CartList />} />
           </Routes>
         </BrowserRouter>
       </Provider>
