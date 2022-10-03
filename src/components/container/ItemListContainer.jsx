@@ -6,12 +6,12 @@ import ItemList from "../item/ItemList";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-    const { id } = useParams();
+    const { activity } = useParams();
 
     useEffect(() => {
         const itemsCollection = collection(db, 'items');
-        const ref = id
-            ? query(itemsCollection, where('category', '==', id))
+        const ref = activity
+            ? query(itemsCollection, where('category', '==', activity))
             : itemsCollection;
 
         getDocs(ref).then((resp) => {
@@ -23,7 +23,7 @@ const ItemListContainer = () => {
             });
         setItems(items);
         });
-    }, [id]);
+    }, [activity]);
 
     return (
         <div className="container">
